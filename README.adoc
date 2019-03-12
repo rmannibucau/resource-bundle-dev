@@ -1,0 +1,26 @@
+= Resource Bundle Dev module
+
+Goal is to provide a Javaagent which can be set on a JVM to debug resource bundle messages
+changing the values using a pattern.
+
+Configuration is passed to the javaagent and separated by `|` character. Example:
+
+[source,sh]
+----
+java .... \
+    -javaagent:/path/to/resource-bundle-dev.jar=active=true|includes=com.company
+----
+
+== Configuration
+
+[options="header"]
+|===
+| Name     | Default            | Description
+| active   | false              | is the agent active
+| pattern  | [$locale] $value   | The pattern to format values. Variables are `$value` for the original value for the current key, `$lang` for the locale language, `$locale` for the complete locale and `$base` for the bundle name.
+| includes | -                  | Bundle names included in the instrumentation (regex).
+| excludes | -                  | Bundle names excluded of the instrumentation (regex).
+|===
+
+TIP: ensure to configure `includes`, when using resource bundles to store numbers as done by the JVM in
+`sun.util` bundles the fact to modify the string will make it no more valid (`[en] 2` is not parseable as an integer for instance).
