@@ -4,7 +4,7 @@
 
   <groupId>com.github.rmannibucau</groupId>
   <artifactId>resource-bundle-dev</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>Resource Bundle Dev Tool</name>
   <description>Simple Javaagent to change resource bundle values.</description>
   <url>https://github.com/rmannibucau/resource-bundle-dev</url>
@@ -43,7 +43,7 @@
     <connection>scm:git:https://github.com/rmannibucau/resource-bundle-dev.git</connection>
     <developerConnection>scm:git:https://github.com/rmannibucau/resource-bundle-dev.git</developerConnection>
     <url>https://github.com/rmannibucau/resource-bundle-dev</url>
-    <tag>resource-bundle-dev-1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <licenses>
